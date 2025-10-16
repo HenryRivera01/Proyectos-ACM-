@@ -1,0 +1,95 @@
+/* Estilo general */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+  color: #333;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor principal */
+.app {
+  text-align: center;
+}
+
+/* Tarjeta central */
+.card {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+p {
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+/* Contador */
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Número grande */
+.count-display {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #3f2b96;
+  background: linear-gradient(90deg, #3f2b96, #a8c0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease;
+}
+
+.count-display:active {
+  transform: scale(1.1);
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Estilo de los botones */
+.btn {
+  background-color: #3f2b96;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(63, 43, 150, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #5b4bcb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(63, 43, 150, 0.4);
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 8px rgba(63, 43, 150, 0.2);
+}

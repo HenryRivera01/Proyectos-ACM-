@@ -1,0 +1,73 @@
+:root {
+  --bg: #0d1117;
+  --text: #e6edf3;
+  --accent: #58a6ff;
+  --pause: #f85149;
+  --reset: #f0b429;
+  --success: #3fb950;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+.home, .stopwatch {
+  background: #161b22;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--text);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.pause {
+  background: var(--pause);
+}
+
+.btn.reset {
+  background: var(--reset);
+  color: #000;
+}
+
+.btn.resume {
+  background: var(--success);
+}
+
+.btn.home {
+  background: #30363d;
+}

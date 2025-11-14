@@ -8,6 +8,7 @@ function App() {
     <>
       <div className="app">
         <h1>Formularios con useState y validación</h1>
+        <h2>Henry Alberto Rivera Ochoa - 20202020092</h2>
         <section>
           <h2>1. Formulario simple (validado)</h2>
           <FormularioValidado />

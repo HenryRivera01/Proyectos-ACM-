@@ -1,0 +1,154 @@
+:root {
+  --bg-page: #f7f7f7;
+  --card-bg: #ffffff;
+  --muted-bg: #fafafa;
+  --text: #1f2937; /* gris oscuro */
+  --muted-text: #6b7280;
+  --accent: #2b7cff;
+  --border: #e6e6e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-page);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* contenedor principal */
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* secciones (cada formulario) - separador visible */
+section {
+  padding: 14px 0 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* quitar borde en el último */
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* título principal y secundarios */
+h1 {
+  font-size: 1.9rem;
+  margin: 0 0 12px 0;
+  color: var(--text);
+}
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 12px 0;
+  color: var(--muted-text);
+}
+
+/* estilo del formulario como tarjeta interna para destacar */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--muted-bg);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* campos */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field label {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.field input,
+.field textarea,
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  color: var(--text);
+}
+
+/* inputs simples fuera de .field también se ven bien */
+input.nombre,
+input.email {
+  background: white;
+}
+
+/* errores */
+.error {
+  color: #b91c1c;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* botones */
+button,
+input[type="submit"] {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+/* separación visual extra entre secciones en pantallas pequeñas */
+@media (max-width: 600px) {
+  .app {
+    padding: 16px;
+  }
+  section {
+    padding: 12px 0;
+  }
+}
+
+/* modo oscuro respetado si el usuario lo prefiere */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: #0b0b0b;
+    --card-bg: #0f1720;
+    --muted-bg: #111827;
+    --text: #e6eef8;
+    --muted-text: #9ca3af;
+    --accent: #4da3ff;
+    --border: rgba(255, 255, 255, 0.06);
+  }
+  body {
+    background: var(--bg-page);
+    color: var(--text);
+  }
+  .formulario {
+    background: var(--muted-bg);
+    border-color: var(--border);
+  }
+  .field input,
+  .field textarea {
+    background: #0b1220;
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+}
